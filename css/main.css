@@ -1,0 +1,172 @@
+.header {
+  font-size: 13px;
+  font-weight: 500; }
+  .header__modal {
+    width: 420px; }
+    .header__modal-close {
+      width: 41px;
+      height: 37px;
+      opacity: 1; }
+
+.gallery {
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .gallery__block {
+    max-width: 555px; }
+  .gallery__title {
+    color: #d58e32;
+    font-size: 20px; }
+  .gallery__line {
+    height: 3px; }
+    .gallery__line-main {
+      width: 8%;
+      background-color: #d58e32; }
+    .gallery__line-secondary {
+      width: 92%; }
+  .gallery__tabs-link {
+    color: black;
+    font-size: 13px; }
+    .gallery__tabs-link:hover {
+      color: #d58e32; }
+  .gallery__tabs-tab {
+    border: 1px solid #dee2e6; }
+  .gallery__tabs .gallery__tabs-link.active {
+    color: #d58e32;
+    border-top: 3px solid #d58e32 !important;
+    border-bottom: 1px solid transparent !important;
+    background-color: #f8f9fa; }
+  .gallery__content-img {
+    min-height: 415px;
+    max-height: 500px; }
+  .gallery__content-icons {
+    bottom: 140px;
+    left: 15px;
+    z-index: 5; }
+  .gallery__content-add {
+    background-color: black;
+    font-size: 12px;
+    display: none; }
+    .gallery__content-add::before {
+      content: '';
+      position: absolute;
+      left: -5%;
+      top: 30%;
+      width: 0;
+      height: 0;
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-right: 6px solid black;
+      clear: both; }
+  .gallery__content-icon {
+    width: 37px;
+    height: 37px;
+    border: 1px solid black; }
+    .gallery__content-icon:hover {
+      color: #d58e32;
+      border: 1px solid #d58e32; }
+  .gallery__content-info {
+    bottom: 20px;
+    right: 55px; }
+  .gallery__content-description {
+    z-index: 2;
+    background-color: #fff;
+    width: 250px;
+    height: 105px; }
+  .gallery__content-spot {
+    width: 105px;
+    height: 105px;
+    background-color: #7b7b7c;
+    z-index: 3;
+    left: -30%; }
+  .gallery__content-price {
+    font-size: 20px;
+    font-weight: 600; }
+  .gallery__content-strike {
+    font-size: 16px; }
+  .gallery__content-left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid black;
+    border-right: 30px solid transparent;
+    z-index: 4;
+    top: 0;
+    left: 0; }
+  .gallery__content-right {
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid black;
+    border-left: 30px solid transparent;
+    z-index: 4;
+    bottom: 0;
+    right: 0; }
+  .gallery__slider-btn {
+    width: 30px;
+    height: 70px;
+    cursor: pointer; }
+  .gallery__slider-overflow {
+    width: 325px; }
+  .gallery__slider-pag {
+    background-color: #ccc;
+    height: 70px;
+    min-width: 70px;
+    max-width: 70px;
+    cursor: pointer; }
+  .gallery__slider-photo {
+    height: 100%;
+    width: auto; }
+  .gallery__advertisement {
+    background-color: #e8edf7; }
+    .gallery__advertisement-start {
+      font-size: 18px; }
+    .gallery__advertisement-price {
+      color: #79ae30; }
+    .gallery__advertisement-name {
+      color: #d58e32; }
+    .gallery__advertisement-btn {
+      background-color: #79ae30;
+      font-weight: 500;
+      font-size: 14px; }
+
+.subscript {
+  background-color: #f2f2f2;
+  color: #d58e32; }
+  .subscript__icon {
+    color: #d58e32; }
+  .subscript__placeholder::-webkit-input-placeholder {
+    color: #b4b4b4; }
+  .subscript__placeholder:-ms-input-placeholder {
+    color: #b4b4b4; }
+  .subscript__placeholder::-ms-input-placeholder {
+    color: #b4b4b4; }
+  .subscript__placeholder::placeholder {
+    color: #b4b4b4; }
+  .subscript__placeholder:focus {
+    outline: none;
+    border-color: #ced4da;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  .subscript__btn {
+    color: #d58e32; }
+
+.footer {
+  background-color: #363636; }
+  .footer__option {
+    color: #a9a9a9; }
+    .footer__option:hover {
+      color: #fff; }
+
+.social {
+  background-color: #2a2a2a;
+  color: #a9a9a9; }
+  .social__option {
+    color: #a9a9a9; }
+    .social__option:hover {
+      color: #d58e32; }
+
+* {
+  font-family: 'Poppins', sans-serif; }

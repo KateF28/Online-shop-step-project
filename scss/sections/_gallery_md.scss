@@ -1,0 +1,17 @@
+@import "../variables.scss";
+
+@media only screen and (min-width: $md) {
+  .gallery {
+    &__tabs {
+      &-link {
+        font-size: 14px;
+      }
+    }
+
+    &__slider {
+      &-overflow {
+        width: 495px;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "variables.scss";
+@import "mixin.scss";
+@import "sections/header_sm.scss";
+@import "sections/gallery_sm.scss";
+@import "sections/subscription_sm.scss";
+@import "sections/footer_sm.scss";
+
+@media only screen and (min-width: $sm) and (max-width: 767.9px) {
+  .container {
+    max-width: 450px;
+  }
+}

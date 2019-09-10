@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+.header {
+    font-size: 13px;
+    font-weight: 500;
+
+    &__modal {
+        width: 420px;
+
+        &-close {
+            width: 41px;
+            height: 37px;
+            opacity: 1;
+        }
+    }
+}

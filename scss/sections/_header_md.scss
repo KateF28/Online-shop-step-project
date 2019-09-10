@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+@media only screen and (min-width: $md) {
+  .header {
+
+    &__modal {
+      width: 460px;
+    }
+  }
+}

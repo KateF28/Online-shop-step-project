@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Online shop step project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sm.css" media="(min-width: 480px) and (max-width: 767.9px)">
+    <link rel="stylesheet" href="css/md.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="css/xl.css" media="(min-width: 1200px)">
+</head>
+<body>
+    <div class="header bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3 col-xl-2 d-flex justify-content-start">
+                    <div class="p-3">USD</div>
+                    <div class="p-3">English</div>
+                    <a href="#" class="text-white p-3">Help</a>
+                </div>
+                <div class="d-none d-md-block col-md-6 col-xl-8"></div>
+                <div class="col-6 col-md-3 col-xl-2 d-flex justify-content-end">
+                    <!-- Button trigger login modal: -->
+                    <a href="#" class="text-white p-3 d-inline-block mr-2" data-toggle="modal" data-target="#loginModal"><i class="fas fa-user mr-2 d-inline"></i>Login</a>
+                    <!-- Modal for login -->
+                    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content rounded-0 border-0 header__modal">
+                                <div class="modal-header border-bottom-0">
+                                    <button type="button" class="close bg-dark text-white header__modal-close p-0" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body px-5">
+                                    <h3 class="modal-title text-uppercase font-weight-bolder mb-3" id="loginModalLabel">Login</h3>
+                                    <form class="form-signin">
+                                        <label for="inputEmail" class="sr-only">Email address</label>
+                                        <input type="email" id="inputEmail" class="form-control rounded-0 mb-3" placeholder="Name/Email*" required autofocus>
+                                        <label for="inputPassword" class="sr-only">Password</label>
+                                        <input type="password" id="inputPassword" class="form-control rounded-0 mb-3" placeholder="Password*" required>
+                                        <button class="btn btn-dark text-uppercase font-weight-bolder mb-3 px-4 shadow" type="submit">Login</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal for login end-->
+                    <!-- Button trigger register modal: -->
+                    <a href="#" class="text-white p-3 d-inline-block" data-toggle="modal" data-target="#registerModal"><i class="fas fa-lock mr-2 d-inline"></i>Register</a>
+                    <!-- Modal for register -->
+                    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content rounded-0 border-0 header__modal">
+                                <div class="modal-header border-bottom-0">
+                                    <button type="button" class="close bg-dark text-white header__modal-close p-0" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true" class="">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body px-5">
+                                    <h3 class="modal-title text-uppercase font-weight-bolder mb-3" id="exampleModalLongTitle">Registration</h3>
+                                    <form>
+                                        <label for="inputRegistrationName" class="sr-only">User name</label>
+                                        <input type="text" id="inputRegistrationName" class="form-control rounded-0 mb-3" placeholder="Name*" required autofocus>
+                                        <label for="inputRegistrationEmail" class="sr-only">Email address</label>
+                                        <input type="email" id="inputRegistrationEmail" class="form-control rounded-0 mb-3" placeholder="Email*" required>
+                                        <label for="inputRegistrationPassword" class="sr-only">Password</label>
+                                        <input type="password" id="inputRegistrationPassword" class="form-control rounded-0 mb-3" placeholder="Password*" required>
+                                        <button class="btn btn-dark text-uppercase font-weight-bolder mb-3 px-4 shadow" type="submit">Register</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal for register end-->
+                </div>
+            </div>
+        </div>
+    </div>
+<!--Header end-->
+    <div class="container">
+        <div class="gallery py-5 row">
+            <div class="gallery__block col-12 col-xl-6">
+                <p class="text-uppercase gallery__title mb-0">Furniture gallery</p>
+                <div class="gallery__line d-flex flex-row mb-3">
+                    <div class="gallery__line-main"></div>
+                    <div class="bg-light gallery__line-secondary"></div>
+                </div>
+                <ul class="nav nav-tabs text-uppercase border-bottom-0 gallery__tabs" id="galleryTab" role="tablist">
+                    <li class="nav-item w-25 text-center gallery__tabs-title">
+                        <a class="nav-link border rounded-0 gallery__tabs-link" id="home-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="false">Featured</a>
+                    </li>
+                    <li class="nav-item w-25 text-center gallery__tabs-title">
+                        <a class="nav-link border rounded-0 gallery__tabs-link active" id="top-seller-tab" data-toggle="tab" href="#top-seller" role="tab" aria-controls="top-seller" aria-selected="true">Top seller</a>
+                    </li>
+                    <li class="nav-item w-25 text-center gallery__tabs-title">
+                        <a class="nav-link border rounded-0 gallery__tabs-link" id="sale-tab" data-toggle="tab" href="#sale" role="tab" aria-controls="sale" aria-selected="false">Sale off</a>
+                    </li>
+                    <li class="nav-item w-25 text-center gallery__tabs-title">
+                        <a class="nav-link border rounded-0 gallery__tabs-link" id="contact-tab" data-toggle="tab" href="#top-rated" role="tab" aria-controls="top-rated" aria-selected="false">Top rated</a>
+                    </li>
+                </ul>
+                <div class="tab-content border-0" id="galleryTabContent">
+                    <div class="tab-pane fade bg-light border-top-0 gallery__tabs-tab" id="featured" role="tabpanel" aria-labelledby="featured-tab">
+                        ...
+                    </div>
+                    <div class="tab-pane fade show active border-top-0 gallery__tabs-tab" id="top-seller" role="tabpanel" aria-labelledby="top-seller-tab">
+                        <div class="bg-light position-relative gallery__content text-center">
+                            <img class="img-fluid gallery__content-img" src="img\products\top-seller\10.png" alt="Top seller furniture">
+                            <div class="d-flex flex-column position-absolute gallery__content-icons">
+                                <a class="d-flex mb-2 gallery__content-link">
+                                    <button type="button" class="btn text-center rounded-0 p-0 mr-2 gallery__content-icon">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                    <button type="button" class="btn text-center rounded-0 align-self-center text-white py-1 px-2 position-relative gallery__content-add">Add to wishlist</button>
+                                </a>
+                                <a class="d-flex mb-2 gallery__content-link">
+                                    <button type="button" data-toggle="modal" data-target="#viewModal" class="btn text-center rounded-0 p-0 mr-2 gallery__content-icon">
+                                        <i class="far fa-eye"></i>
+                                    </button>
+                                    <button type="button" data-toggle="modal" data-target="#viewModal" class="btn text-center rounded-0 align-self-center text-white py-1 px-2 position-relative gallery__content-add">Quick view</button>
+                                </a>
+                                <a class="d-flex gallery__content-link">
+                                    <button type="button" class="btn text-center rounded-0 p-0 mr-2 gallery__content-icon">
+                                        <i class="fas fa-cart-arrow-down"></i>
+                                    </button>
+                                    <button type="button" class="btn text-center rounded-0 align-self-center text-white py-1 px-2 position-relative gallery__content-add">Add to cart</button>
+                                </a>
+                            </div>
+                            <div class="position-absolute gallery__content-info">
+                            <div class="shadow-sm bg-white d-flex flex-column justify-content-center position-relative gallery__content-description">
+                                <p class="font-weight-bolder gallery__content-title">Aenean Ru Bristique</p>
+                                <p class="gallery__content-marks"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star text-secondary"></i><i class="far fa-star text-secondary"></i><i class="far fa-star text-secondary"></i></p>
+                                <div class="position-absolute gallery__content-left"></div>
+                                <div class="position-absolute gallery__content-right"></div>
+                                <div class="rounded-circle pt-4 text-white position-absolute gallery__content-spot">
+                                    <p class="mb-0 pt-1 gallery__content-price">$120.00</p>
+                                    <p class="font-weight-normal gallery__content-strike"><s>$160.00</s></p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="border-top p-2 d-flex justify-content-between gallery__slider">
+                            <div id="gallerySliderLeft" class="d-flex justify-content-center text-light bg-dark mr-1 gallery__slider-btn prev"><a class="d-block align-self-center"><</a></div>
+                            <div class="position-relative overflow-hidden gallery__slider-overflow">
+                            <div class="d-flex justify-content-between position-absolute gallery__slider-pags">
+                            <div class="mr-1 pt-1 gallery__slider-pag">
+                                <img src="img\products\top-seller\10.png" alt="Top seller furniture" class="d-block mx-auto gallery__slider-photo">
+                            </div>
+                            <div class="mr-1 pt-1 gallery__slider-pag">
+                                <img src="img\products\top-seller\11.png" alt="Top seller furniture" class="d-block mx-auto gallery__slider-photo">
+                            </div>
+                            <div class="mr-1 pt-1 gallery__slider-pag">
+                                <img src="img\products\top-seller\12.png" alt="Top seller furniture" class="d-block mx-auto gallery__slider-photo">
+                            </div>
+                            <div class="mr-1 pt-1 gallery__slider-pag">
+                                <img src="img\products\top-seller\13.png" alt="Top seller furniture" class="d-block mx-auto gallery__slider-photo">
+                            </div>
+                            <div class="mr-1 pt-1 gallery__slider-pag">
+                                <img src="img\products\top-seller\14.png" alt="Top seller furniture" class="d-block mx-auto gallery__slider-photo">
+                            </div>
+                            <div class="mr-1 pt-1 gallery__slider-pag">
+                                <img src="img\products\top-seller\15.png" alt="Top seller furniture" class="d-block mx-auto gallery__slider-photo">
+                            </div>
+                                <div class="mr-1 pt-1 gallery__slider-pag">
+                                    <img src="img\products\top-seller\16.png" alt="Top seller furniture" class="d-block mx-auto gallery__slider-photo">
+                                </div>
+                                <div class="mr-1 pt-1 gallery__slider-pag">
+                                    <img src="img\products\top-seller\17.png" alt="Top seller furniture" class="d-block mx-auto gallery__slider-photo">
+                                </div>
+                        </div>
+                            </div>
+                            <div id="gallerySliderRight" class="d-flex justify-content-center text-light bg-dark mr-1 gallery__slider-btn prev"><a class="d-block align-self-center">></a></div>
+                        </div>
+                        </div>
+                    <div class="tab-pane fade border-top-0 bg-light gallery__tabs-tab" id="sale" role="tabpanel" aria-labelledby="sale-tab">
+                        ...
+                    </div>
+                    <div class="tab-pane fade border-top-0 bg-light gallery__tabs-tab" id="top-rated" role="tabpanel" aria-labelledby="top-rated">
+                        ...
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-xl-block col-xl-6 px-5 pt-5 pb-1 gallery__advertisement">
+                <p class="text-uppercase gallery__advertisement-start">From<span class="h1 ml-1 gallery__advertisement-price">$50.80</span></p>
+                <h1 class="text-capitalize gallery__advertisement-name mb-4">Bedroom bed</h1>
+                <button class="btn text-uppercase px-3 py-2 text-white gallery__advertisement-btn" type="submit">Shop now</button>
+                <img src="img/products/bedroom-bed-banner.png" class="img-fluid mt-5 pt-4" alt="Bedroom bed">
+            </div>
+        </div>
+    </div>
+    <!--Gallery end-->
+    <div class="bg-light py-4 subscript">
+        <div class="container">
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-0 col-xl-2"></div>
+                    <div class="col-md-3 col-xl-2 text-uppercase font-weight-bolder d-none d-md-block subscript__title">Newsletter:</div>
+                    <div class="col-10 col-md-8 col-xl-5">
+                        <label class="sr-only" for="subscriptionFormInputGroup">Email</label>
+                        <div class="input-group ">
+                            <div class="input-group-prepend border-right-0">
+                                <div class="input-group-text bg-white border-right-0 subscript__icon"><i class="fas fa-envelope pr-3 border-right"></i></div>
+                            </div>
+                            <input type="email" class="form-control border-left-0 subscript__placeholder" id="subscriptionFormInputGroup" placeholder="Subscribe to newsletter">
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn bg-white subscript__btn"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    <div class="col-0 col-xl-2"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--Subscription end-->
+    <div class="footer">
+        <div class="container">
+            <div class="row py-4">
+                <div class="col-12 col-xl-6">
+                    <div class="row">
+                    <div class="col-6">
+                        <h5 class="text-uppercase text-white footer__title my-4">Information</h5>
+                        <a href="#" class="d-block text-decoration-none footer__option">About us</a>
+                        <a href="#" class="d-block text-decoration-none footer__option">Privacy</a>
+                        <a href="#" class="d-block text-decoration-none footer__option">Conditions</a>
+                        <a href="#" class="d-block text-decoration-none footer__option">Online support</a>
+                    </div>
+                        <div class="col-6">
+                        <h5 class="text-uppercase text-white footer__title my-4">My account</h5>
+                            <a href="#" class="d-block text-decoration-none footer__option">Login</a>
+                            <a href="#" class="d-block text-decoration-none footer__option">My Cart</a>
+                            <a href="#" class="d-block text-decoration-none footer__option">Wishlist</a>
+                            <a href="#" class="d-block text-decoration-none footer__option">About us</a>
+                    </div>
+                </div>
+                </div>
+                <div class="col-12 col-xl-6">
+                    <div class="row">
+                    <div class="col-6">
+                        <h5 class="text-uppercase text-white footer__title my-4">Information</h5>
+                        <a href="#" class="d-block text-decoration-none footer__option">Specials</a>
+                        <a href="#" class="d-block text-decoration-none footer__option">New Products</a>
+                        <a href="#" class="d-block text-decoration-none footer__option">Best Sellers</a>
+                        <a href="#" class="d-block text-decoration-none footer__option">Our Stores</a>
+                    </div>
+                    <div class="col-6">
+                        <h5 class="text-uppercase text-white footer__title my-4">Orders</h5>
+                        <a href="#" class="d-block text-decoration-none footer__option">Payment options</a>
+                        <a href="#" class="d-block text-decoration-none footer__option">Shipping and delivery</a>
+                        <a href="#" class="d-block text-decoration-none footer__option">Returns</a>
+                        <a href="#" class="d-block text-decoration-none mb-3 footer__option">Shipping</a>
+                        <div class="d-flex flex-wrap w-75 w-md-100">
+                            <img src="img/cards/visa.png" alt="Payment card" class="d-block mr-2 my-2">
+                            <img src="img/cards/master-card.png" alt="Payment card" class="d-block mr-2 my-2">
+                            <img src="img/cards/dacover.png" alt="Payment card" class="d-block mr-2 my-2">
+                            <img src="img/cards/blue-card.png" alt="Payment card" class="d-block mr-2 my-2">
+                            <img src="img/cards/paypal.png" alt="Payment card" class="d-block my-2">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+    <div class="social">
+        <div class="container">
+            <div class="row pt-4 pb-3">
+                <div class="col-12 col-md-7 ml-xl-auto col-xl-6">
+                    <p class="text-center text-md-left text-xl-center mt-0 mb-2 py-0">©Copyright 2016 Bazar | All Rights Reserved</p>
+                </div>
+                <div class="col-12 col-md-5 col-xl-3">
+                    <p class="text-center text-md-right my-0 py-0">
+                        <a href="#" class="text-decoration-none social__option"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-decoration-none ml-3 social__option"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-decoration-none ml-3 social__option"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-decoration-none ml-3 social__option"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="text-decoration-none ml-3 social__option"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-decoration-none ml-3 social__option"><i class="fab fa-pinterest-p"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer end-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/89e34f113d.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

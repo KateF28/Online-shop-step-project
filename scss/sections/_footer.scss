@@ -1,0 +1,25 @@
+@import "../variables.scss";
+.footer {
+  background-color: #363636;
+
+  &__option {
+    color: #a9a9a9;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.social {
+  background-color: #2a2a2a;
+  color: #a9a9a9;
+
+  &__option {
+    color: #a9a9a9;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}

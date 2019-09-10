@@ -1,0 +1,194 @@
+@import "../variables.scss";
+
+.gallery {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+
+  &__block {
+    max-width: 555px;
+  }
+
+  &__title {
+    color: $main-color;
+    font-size: 20px;
+  }
+
+  &__line {
+    height: 3px;
+
+    &-main {
+      width: 8%;
+      background-color: $main-color;
+    }
+
+    &-secondary {
+      width: 92%;
+    }
+  }
+
+  &__tabs {
+    &-link {
+      color: black;
+      font-size: 13px;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+
+    &-tab {
+      border: 1px solid #dee2e6;
+    }
+  }
+
+    &__tabs .gallery__tabs-link.active {
+      color: $main-color;
+      border-top: 3px solid $main-color!important;
+      border-bottom: 1px solid transparent!important;
+      background-color: #f8f9fa;
+    }
+
+  &__content {
+    &-img {
+      min-height: 415px;
+      max-height: 500px;
+    }
+
+    &-icons {
+      bottom: 140px;
+      left: 15px;
+      z-index: 5;
+    }
+
+    &-add {
+      background-color: black;
+      font-size: 12px;
+      display: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -5%;
+        top: 30%;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-right: 6px solid black;
+        clear: both;
+      }
+    }
+
+    &-icon {
+      width: 37px;
+      height: 37px;
+      border: 1px solid black;
+
+      &:hover {
+        color: $main-color;
+        border: 1px solid $main-color;
+      }
+    }
+
+    &-info {
+      bottom: 20px;
+      right: 55px;
+    }
+
+    &-description {
+      z-index: 2;
+      background-color: #fff;
+      width: 250px;
+      height: 105px;
+    }
+
+    &-spot {
+      width: 105px;
+      height: 105px;
+      background-color: #7b7b7c;
+      z-index: 3;
+      left: -30%;
+    }
+
+    &-price {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    &-strike {
+      font-size: 16px;
+    }
+
+  &-left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid black;
+    border-right: 30px solid transparent;
+    z-index: 4;
+    top: 0;
+    left: 0;
+  }
+
+    &-right {
+      width: 0;
+      height: 0;
+      border-bottom: 30px solid black;
+      border-left: 30px solid transparent;
+      z-index: 4;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__slider {
+    &-btn {
+      width: 30px;
+      height: 70px;
+      cursor: pointer;
+    }
+
+    &-overflow {
+      width: 325px;
+    }
+
+    &-pags {
+      //left: 0;
+    }
+
+    &-pag {
+      background-color: #ccc;
+      height: 70px;
+      min-width: 70px;
+      max-width: 70px;
+      cursor: pointer;
+    }
+
+    &-photo {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+    &__advertisement {
+    background-color: #e8edf7;
+
+    &-start {
+      font-size: 18px;
+    }
+
+    &-price {
+      color: $success-color;
+    }
+
+    &-name {
+      color: $main-color;
+    }
+
+    &-btn {
+      background-color: $success-color;
+      font-weight: 500;
+      font-size: 14px;
+    }
+  }
+}

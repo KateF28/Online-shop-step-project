@@ -1,0 +1,9 @@
+@media only screen and (min-width: 768px) {
+  .header__modal {
+    width: 460px; } }
+
+@media only screen and (min-width: 768px) {
+  .gallery__tabs-link {
+    font-size: 14px; }
+  .gallery__slider-overflow {
+    width: 495px; } }
